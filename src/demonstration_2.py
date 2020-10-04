@@ -12,6 +12,23 @@ Examples:
 number([]) # => []
 number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 """
+
+
 def number(lines):
     # Your code here
 
+    # initiate a new list
+    # iterate through the list, for each instance on the list you append the new entry into the new list
+    #
+    # regular version
+    # newList = []
+
+    # for i, item in enumerate(lines):
+    #     newList.append(str(i + 1) + ": " + item)
+    # return newList
+
+    # List Comprehension version
+    return [str(i + 1) + ": " + item for i, item in enumerate(lines)]
+
+
+print(number(["a", "b", "c"]))
